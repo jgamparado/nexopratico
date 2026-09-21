@@ -1,0 +1,63 @@
+/* Camada visual: preserva a estrutura e os tokens originais da página. */
+:root{--font-sans:'Poppins',ui-sans-serif,system-ui,sans-serif;scroll-padding-top:1rem}
+html{font-family:var(--font-sans)}
+body{font-family:var(--font-sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3{font-family:var(--font-sans);text-wrap:balance}
+h1{letter-spacing:-.045em!important}
+h2{letter-spacing:-.038em!important;line-height:1.12!important}
+h3{letter-spacing:-.022em}
+a,button{touch-action:manipulation}
+a:focus-visible,button:focus-visible{outline:3px solid oklch(0.62 .18 145);outline-offset:4px}
+
+/* Barra e primeiro bloco — mesma paleta, mais contraste e acabamento. */
+.min-h-screen>div:first-child{background:linear-gradient(90deg,#b91c1c,#dc2626,#b91c1c)!important;min-height:40px;display:flex;align-items:center;justify-content:center}
+.min-h-screen>section:first-of-type{position:relative;isolation:isolate}
+.min-h-screen>section:first-of-type:before{content:'';position:absolute;inset:0 0 auto;height:310px;background:radial-gradient(ellipse at 50% -35%,oklch(92% .05 70/.55),transparent 70%);z-index:-1;pointer-events:none}
+.min-h-screen>section:first-of-type h1{max-width:980px;margin-inline:auto;font-weight:900!important}
+.min-h-screen>section:first-of-type p{max-width:730px!important;font-size:1.02rem}
+.min-h-screen>section:first-of-type .bg-white.rounded-2xl{border:1px solid oklch(90% .02 60);box-shadow:0 22px 50px oklch(30% .06 20/.14)!important;overflow:hidden}
+.min-h-screen>section:first-of-type .bg-white.rounded-2xl img{transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.min-h-screen>section:first-of-type .bg-white.rounded-2xl:hover img{transform:scale(1.012)}
+
+/* Hierarquia das áreas de conteúdo sem mudar os grids existentes. */
+.min-h-screen>section{scroll-margin-top:16px}
+.min-h-screen>section .text-center>span.uppercase{font-size:.7rem!important;letter-spacing:.2em!important;font-weight:800!important}
+.min-h-screen>section .text-center>div.h-1{width:4.5rem!important;height:4px!important;border-radius:999px}
+.min-h-screen>section .grid>div.bg-white.rounded-2xl{border-color:oklch(89% .02 60)!important;box-shadow:0 8px 22px oklch(30% .06 20/.055);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.min-h-screen>section .grid>div.bg-white.rounded-2xl:hover{border-color:oklch(79% .06 75)!important;box-shadow:0 16px 30px oklch(30% .06 20/.11);transform:translateY(-3px)}
+.min-h-screen>section .grid>div.bg-white.rounded-2xl>div.rounded-full{box-shadow:0 7px 15px oklch(36% .13 20/.18)}
+
+/* Prévia e depoimentos: imagens e cartões respiram melhor. */
+.marquee-track{will-change:transform}
+.marquee-track>img{border:1px solid oklch(89% .02 60);box-shadow:0 16px 32px oklch(30% .06 20/.16)!important}
+.marquee-track>div.bg-card{border-color:oklch(88% .02 60)!important;box-shadow:0 10px 24px oklch(30% .06 20/.07)!important}
+.marquee-track>div.bg-card img{border:2px solid oklch(90% .02 60)}
+
+/* Bónus e planos: preserva os cards e realça a leitura das escolhas. */
+.bg-card.border{border-color:oklch(88% .02 60)!important}
+.bg-card.border.rounded-2xl{transition:transform .22s ease,box-shadow .22s ease}
+.bg-card.border.rounded-2xl:hover{transform:translateY(-3px);box-shadow:0 18px 34px oklch(30% .06 20/.1)!important}
+#planos .grid>div{box-shadow:0 12px 28px oklch(30% .06 20/.06)}
+#planos .grid>div.relative{box-shadow:0 22px 46px oklch(36% .13 20/.25)!important}
+#planos .grid>div>.text-5xl{letter-spacing:-.06em;line-height:.95}
+
+/* Chamadas e FAQ com estados mais claros, usando as cores originais. */
+.inline-flex.rounded-full{transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}
+.inline-flex.rounded-full:hover{transform:translateY(-2px);filter:saturate(1.07)}
+button.w-full{min-height:52px;transition:background-color .18s ease,color .18s ease}
+button.w-full:hover{background-color:oklch(96% .025 60)!important}
+.space-y-3>div.bg-card{box-shadow:0 4px 12px oklch(30% .06 20/.025)}
+.space-y-3>div.bg-card:has(button[aria-expanded='true']){border-color:oklch(77% .07 75)!important;box-shadow:0 10px 22px oklch(30% .06 20/.07)}
+footer{font-family:var(--font-sans);letter-spacing:.01em}
+
+@media(max-width:640px){
+  .min-h-screen>div:first-child{min-height:44px;font-size:.76rem!important}
+  .min-h-screen>section:first-of-type h1{letter-spacing:-.04em!important}
+  .min-h-screen>section:first-of-type p{font-size:.96rem}
+  .min-h-screen>section .grid>div.bg-white.rounded-2xl:hover,.bg-card.border.rounded-2xl:hover{transform:none}
+  .min-h-screen>section .text-center>span.uppercase{font-size:.64rem!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}

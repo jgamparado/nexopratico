@@ -1,0 +1,47 @@
+{
+  "tool": "built-in imagegen",
+  "assets": [
+    {
+      "key": "hero",
+      "prompt": "Use case: product-mockup. Create exactly one image. Photorealistic premium studio product photography for Portuguese therapeutic PDF materials. Consistent brand identity NEXO PRÁTICO: matte petroleum #123F4A, teal #317A77, warm white, very small gold foil accents; refined editorial typography and simple flowing abstract line motifs. Seamless very pale #F5F9F8 background, natural soft daylight and subtle contact shadows, generous whitespace margins. No people, badges, seals, signatures, false accreditation, UI, video elements, extra claims or invented microtext. Render all requested text verbatim with exact accents. No words beyond the explicitly requested words.\nLandscape 3:2. Center a dominant upright hardcover book alongside one subordinate certificate sheet and a small stack of exercise sheets. Cover brand \"NEXO PRÁTICO\", main title \"BIBLIOTECA DE DINÂMICAS TERAPÊUTICAS\", large \"+250\", smaller \"DINÂMICAS PRONTAS\", footer \"COM CERTIFICADO INCLUÍDO + BÓNUS\". Certificate bears only \"CERTIFICADO DE CONCLUSÃO\". Exercise sheets have abstract diagrams only, no text. Realistic matte cover, sharp readable words.",
+      "path": "assets/nexo-principal.png",
+      "web": "assets/nexo-principal.webp"
+    },
+    {
+      "key": "certificate",
+      "prompt": "Use case: product-mockup. Create exactly one image. Photorealistic premium studio product photography for Portuguese therapeutic PDF materials. Consistent brand identity NEXO PRÁTICO: matte petroleum #123F4A, teal #317A77, warm white, very small gold foil accents; refined editorial typography and simple flowing abstract line motifs. Seamless very pale #F5F9F8 background, natural soft daylight and subtle contact shadows, generous whitespace margins. No people, badges, seals, signatures, false accreditation, UI, video elements, extra claims or invented microtext. Render all requested text verbatim with exact accents. No words beyond the explicitly requested words.\nLandscape 3:2. A single elegant landscape certificate sheet laid at a slight angle on the pale studio surface, shown almost front-on so words read easily. White paper, restrained petroleum and teal fine border, small tasteful gold linear accent. Only brand \"NEXO PRÁTICO\" at top and prominent title \"CERTIFICADO DE CONCLUSÃO\". The remaining paper is intentionally clean with a restrained flowing abstract line motif; no name fields, signatures, seals, body text, credentials, or additional words.",
+      "path": "assets/nexo-bonus-1.png",
+      "web": "assets/nexo-bonus-1.webp"
+    },
+    {
+      "key": "manual",
+      "prompt": "Use case: product-mockup. Create exactly one image. Photorealistic premium studio product photography for Portuguese therapeutic PDF materials. Consistent brand identity NEXO PRÁTICO: matte petroleum #123F4A, teal #317A77, warm white, very small gold foil accents; refined editorial typography and simple flowing abstract line motifs. Seamless very pale #F5F9F8 background, natural soft daylight and subtle contact shadows, generous whitespace margins. No people, badges, seals, signatures, false accreditation, UI, video elements, extra claims or invented microtext. Render all requested text verbatim with exact accents. No words beyond the explicitly requested words.\nSquare 1:1. One upright premium matte petroleum guidebook in a subtle three-quarter view, no other props. Small brand \"NEXO PRÁTICO\" at top; prominent white title \"MANUAL DO TERAPEUTA\". Restrained flowing line motif in teal with a tiny gold foil accent. No other words.",
+      "path": "assets/nexo-bonus-2.png",
+      "web": "assets/nexo-bonus-2.webp"
+    },
+    {
+      "key": "autoconhecimento",
+      "prompt": "Use case: product-mockup. Create exactly one image. Photorealistic premium studio product photography for Portuguese therapeutic PDF materials. Consistent brand identity NEXO PRÁTICO: matte petroleum #123F4A, teal #317A77, warm white, very small gold foil accents; refined editorial typography and simple flowing abstract line motifs. Seamless very pale #F5F9F8 background, natural soft daylight and subtle contact shadows, generous whitespace margins. No people, badges, seals, signatures, false accreditation, UI, video elements, extra claims or invented microtext. Render all requested text verbatim with exact accents. No words beyond the explicitly requested words.\nSquare 1:1. One upright premium matte teal guidebook in a subtle three-quarter view, no other props. Small brand \"NEXO PRÁTICO\" at top; prominent white title \"50 DINÂMICAS DE AUTOCONHECIMENTO\". Restrained abstract interconnected flowing line motif in petroleum and pale teal with a tiny gold foil accent. No other words.",
+      "path": "assets/nexo-bonus-3.png",
+      "web": "assets/nexo-bonus-3.webp"
+    },
+    {
+      "key": "grupo",
+      "prompt": "Use case: product-mockup. Create exactly one image. Photorealistic premium studio product photography for Portuguese therapeutic PDF materials. Consistent brand identity NEXO PRÁTICO: matte petroleum #123F4A, teal #317A77, warm white, very small gold foil accents; refined editorial typography and simple flowing abstract line motifs. Seamless very pale #F5F9F8 background, natural soft daylight and subtle contact shadows, generous whitespace margins. No people, badges, seals, signatures, false accreditation, UI, video elements, extra claims or invented microtext. Render all requested text verbatim with exact accents. No words beyond the explicitly requested words.\nSquare 1:1. One upright premium matte petroleum guidebook in a subtle three-quarter view, no other props. Small brand \"NEXO PRÁTICO\" at top; prominent white title \"TERAPIA EM GRUPO: GUIA PRÁTICO\". Restrained abstract flowing line motif forming softly overlapping circles in teal with a tiny gold foil accent. No other words.",
+      "path": "assets/nexo-bonus-4.png",
+      "web": "assets/nexo-bonus-4.webp"
+    },
+    {
+      "key": "ansiedade",
+      "prompt": "Use case: product-mockup. Create exactly one image. Photorealistic premium studio product photography for Portuguese therapeutic PDF materials. Consistent brand identity NEXO PRÁTICO: matte petroleum #123F4A, teal #317A77, warm white, very small gold foil accents; refined editorial typography and simple flowing abstract line motifs. Seamless very pale #F5F9F8 background, natural soft daylight and subtle contact shadows, generous whitespace margins. No people, badges, seals, signatures, false accreditation, UI, video elements, extra claims or invented microtext. Render all requested text verbatim with exact accents. No words beyond the explicitly requested words.\nSquare 1:1. One upright premium matte teal guidebook in a subtle three-quarter view, no other props. Small brand \"NEXO PRÁTICO\" at top; prominent white title \"DINÂMICAS PARA A ANSIEDADE\". Restrained gently flowing wave line motif in pale teal and petroleum with a tiny gold foil accent. No other words.",
+      "path": "assets/nexo-bonus-5.png",
+      "web": "assets/nexo-bonus-5.webp"
+    },
+    {
+      "key": "planner",
+      "prompt": "Use case: product-mockup. Create exactly one image. Photorealistic premium studio product photography for Portuguese therapeutic PDF materials. Consistent brand identity NEXO PRÁTICO: matte petroleum #123F4A, teal #317A77, warm white, very small gold foil accents; refined editorial typography and simple flowing abstract line motifs. Seamless very pale #F5F9F8 background, natural soft daylight and subtle contact shadows, generous whitespace margins. No people, badges, seals, signatures, false accreditation, UI, video elements, extra claims or invented microtext. Render all requested text verbatim with exact accents. No words beyond the explicitly requested words.\nSquare 1:1. One premium spiral-bound session planner standing upright in a subtle three-quarter view, matte petroleum cover, tasteful small warm-metal spiral. Small brand \"NEXO PRÁTICO\" at top; prominent white title \"PLANEAMENTO DE SESSÕES: 90 DIAS\". Restrained flowing line motif with minimal abstract grid in teal and a tiny gold foil accent. No other words.",
+      "path": "assets/nexo-bonus-6.png",
+      "web": "assets/nexo-bonus-6.webp"
+    }
+  ]
+}
