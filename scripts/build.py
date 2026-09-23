@@ -21,3 +21,24 @@ out=Path('dist');out.mkdir(exist_ok=True)
 for file in sorted(p.files|{'index.html'}):
  target=out/file;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(file,target)
 print(f'Validated unique IDs, anchors, CSS structure and {len(p.files)} linked files. Static output ready.')
+
+# Package the standalone post-purchase page and its shared resources.
+upsell = Path('upsell/index.html')
+if upsell.is_file():
+ page = Resources();page.feed(upsell.read_text())
+ assert len(set(page.ids)) == len(page.ids), 'Duplicate upsell IDs'
+ assert all(a in page.ids for a in page.anchors), 'Missing upsell anchor'
+ root = Path.cwd().resolve()
+ sources = {upsell.resolve()}
+ for resource in page.files:
+  source = (upsell.parent / resource).resolve()
+  assert source.is_relative_to(root), f'Resource outside site: {resource}'
+  assert source.is_file(), f'Missing upsell resource: {resource}'
+  sources.add(source)
+ for source in sorted(sources):
+  target = out / source.relative_to(root)
+  target.parent.mkdir(parents=True, exist_ok=True)
+  shutil.copyfile(source, target)
+ css = Path('upsell/upsell.css').read_text()
+ assert css.count('{') == css.count('}'), 'Unbalanced upsell CSS'
+ print(f'Upsell validated and packaged with {len(sources)} files.')

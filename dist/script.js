@@ -127,3 +127,27 @@ document.addEventListener('DOMContentLoaded', () => {
     gallery.before(controls);
   }
 });
+
+/* Cada situação revela uma dinâmica real da biblioteca. */
+document.addEventListener('DOMContentLoaded', () => {
+  const scenarios = [...document.querySelectorAll('[data-scenario]')];
+  const example = document.querySelector('.session-example');
+  if (!example || !scenarios.length) return;
+  const image = example.querySelector('img');
+  const link = example.querySelector('[data-preview]');
+  scenarios.forEach((scenario) => {
+    scenario.addEventListener('toggle', () => {
+      if (!scenario.open) return;
+      scenarios.forEach((other) => { if (other !== scenario) other.open = false; });
+      image.src = scenario.dataset.image;
+      image.alt = scenario.dataset.title;
+      link.href = scenario.dataset.image;
+      example.querySelector('[data-example-title]').textContent = scenario.dataset.title;
+      example.querySelector('[data-example-caption]').textContent = scenario.dataset.caption;
+      example.querySelector('[data-example-counter]').textContent = `${scenario.dataset.scenario} / 03`;
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        image.animate([{ opacity: .45 }, { opacity: 1 }], { duration: 240, easing: 'ease-out' });
+      }
+    });
+  });
+});
