@@ -32,7 +32,7 @@ for directory in ('up1', 'down1'):
  root = Path.cwd().resolve()
  sources = {upsell.resolve()}
  for resource in page.files:
-  source = (upsell.parent / resource).resolve()
+  source = ((root / resource.lstrip('/')) if resource.startswith('/') else (upsell.parent / resource)).resolve()
   assert source.is_relative_to(root), f'Resource outside site: {resource}'
   assert source.is_file(), f'Missing upsell resource: {resource}'
   sources.add(source)
