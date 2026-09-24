@@ -5,3 +5,6 @@
 @media(max-width:360px){.reading-width{width:calc(100% - 32px)}.tsl-hero h1{font-size:30px}.upsell-brand{gap:10px;font-size:11px}.upsell-brand span{padding-left:10px}.turning-point,.practice-example{padding:24px 19px}.upsell-guarantee{gap:14px;padding:24px 18px}.upsell-guarantee>svg{width:37px;height:44px}.mobile-purchase-inner{gap:10px}.mobile-purchase-inner .button{font-size:10px}}
 
 .kit-visual{margin:28px 0 24px}.kit-visual img{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--line)}.kit-visual figcaption,.worksheet-visual figcaption{font-size:11px;line-height:1.7;color:var(--text);text-align:center;margin-top:10px}.worksheet-visual{margin:26px auto 0;max-width:410px}.worksheet-visual img{width:100%;height:auto;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}
+
+/* Upsell com uma única decisão no final da carta. */
+.single-cta-page main{padding-bottom:35px}.single-cta-page .upsell-decline{margin-top:18px}.single-cta-page main .upsell-guarantee{margin-bottom:42px}

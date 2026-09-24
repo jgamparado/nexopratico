@@ -1,17 +1,20 @@
 (() => {
   const config = window.NEXO_UPSELL || {};
-  const configureLinks = (selector, value) => {
+  const configureLinks = (selector, value, allowInternal = false) => {
+    if (typeof value !== 'string' || !value || value.includes('[')) return;
+    const internal = allowInternal && /^(\/(?!\/)|\.\.?\/)/.test(value);
     let url;
-    try { url = new URL(value); } catch { return; }
-    if (url.protocol !== 'https:') return;
+    try { url = internal ? new URL(value, window.location.href) : new URL(value); } catch { return; }
+    if (internal ? url.origin !== window.location.origin : url.protocol !== 'https:') return;
     document.querySelectorAll(selector).forEach((link) => {
       link.href = url.href;
       link.removeAttribute('aria-disabled');
     });
   };
   configureLinks('[data-accept]', config.acceptUrl);
-  configureLinks('[data-decline]', config.declineUrl);
+  configureLinks('[data-decline]', config.declineUrl, true);
   const bar = document.querySelector('.mobile-purchase-bar');
+  if (!bar) return;
   const mobile = window.matchMedia('(max-width: 760px)');
   let queued = false;
   const updateBar = () => {
